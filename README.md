@@ -1,30 +1,24 @@
 # GORM Sqlite Driver
 
-![CI](https://github.com/go-gorm/sqlite/workflows/CI/badge.svg)
+![CI](https://github.com/yywing/sqlite/workflows/CI/badge.svg)
+
+## Detail
+
+use **pure go** sqlite driver [https://gitlab.com/cznic/sqlite](https://gitlab.com/cznic/sqlite)
+
+**notice**: Although you could see mattn's driver (github.com/mattn/go-sqlite3) in go.mod file, we import it for tests only.
 
 ## USAGE
 
 ```go
 import (
-  "gorm.io/driver/sqlite"
-  "gorm.io/gorm"
-)
-
-// github.com/mattn/go-sqlite3
-db, err := gorm.Open(sqlite.Open("gorm.db"), &gorm.Config{})
-```
-
-Checkout [https://gorm.io](https://gorm.io) for details.
-
-### Pure go Sqlite Driver
-
-checkout [https://github.com/glebarez/sqlite](https://github.com/glebarez/sqlite) for details
-
-```go
-import (
-  "github.com/glebarez/sqlite"
+  "github.com/yywing/sqlite"
   "gorm.io/gorm"
 )
 
 db, err := gorm.Open(sqlite.Open("gorm.db"), &gorm.Config{})
 ```
+
+## BUILD
+
+https://modern-c.appspot.com/-/builder/?importpath=modernc.org%2fsqlite
